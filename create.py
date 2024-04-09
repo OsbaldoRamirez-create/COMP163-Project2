@@ -3,18 +3,20 @@ from psycopg2 import sql
 
 DATABASE_URLS = []
 
+LongText = ""
 
-create_table_command1 = sql.SQL("""
+create_table_book = sql.SQL("""
 CREATE TABLE IF NOT EXISTS book (
-    
-)  
+    description bytea;  
 """)
 
-create_table_command2 = sql.SQL("""
+create_table_customer = sql.SQL("""
 CREATE TABLE IF NOT EXISTS customer (
     
 )  
 """)
+#INSERT INTO books (description) VALUES (pgp_sym_encrypt('sensitive data', 'encryption_key'))
+
 
 def create_table_in_database(db_url):
     try:
@@ -23,8 +25,8 @@ def create_table_in_database(db_url):
         cur = conn.cursor()
         
         # Execute the create table command
-        cur.execute(create_table_command1)
-        cur.execute(create_table_command2)
+        cur.execute(create_table_book)
+        cur.execute(create_table_customer)
         
         # Commit the changes
         conn.commit()
