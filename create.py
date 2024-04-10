@@ -1,22 +1,28 @@
 import psycopg2
 from psycopg2 import sql
 
-DATABASE_URLS = []
-
-LongText = ""
+db_url = "postgres://lqkngsak:SeSIYxJTVw14q-Me9vgA2B7RbmxIUpPc@bubble.db.elephantsql.com/lqkngsak"
 
 create_table_book = sql.SQL("""
 CREATE TABLE IF NOT EXISTS book (
-    description bytea;  
+    bookID SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    genre TEXT NOT NULL,
+    author TEXT NOT NULL,
+    publishDate DATE NOT NULL,
+    price DECIMAL NOT NULL,
+    description bytea
+    );
 """)
 
 create_table_customer = sql.SQL("""
 CREATE TABLE IF NOT EXISTS customer (
-    
-)  
+    CustomerID SERIAL PRIMARY KEY,    
+    CustomerName TEXT NOT NULL,
+    CustomerNumber TEXT NOT NULL,
+    CustomerEmail TEXT NOT NULL
+    );
 """)
-#INSERT INTO books (description) VALUES (pgp_sym_encrypt('sensitive data', 'encryption_key'))
-
 
 def create_table_in_database(db_url):
     try:
@@ -40,6 +46,4 @@ def create_table_in_database(db_url):
         if cur: cur.close()
         if conn: conn.close()
 
-
-for db_url in DATABASE_URLS:
-    create_table_in_database(db_url)
+create_table_in_database(db_url)
