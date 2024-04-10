@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2 import sql
 
-db_url = "postgres://lqkngsak:SeSIYxJTVw14q-Me9vgA2B7RbmxIUpPc@bubble.db.elephantsql.com/lqkngsak"
+db_url = ""
 
 create_table_book = sql.SQL("""
 CREATE TABLE IF NOT EXISTS book (
