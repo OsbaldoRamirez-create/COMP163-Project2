@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2 import sql
 
-db_url = ""
+db_url = "postgres://gvdulkma:RPuoPh_iTN-1XwDnpkrBIsmTMqyiDo0f@bubble.db.elephantsql.com/gvdulkma"
 
 create_table_book = sql.SQL("""
 CREATE TABLE IF NOT EXISTS book (
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS book (
     author TEXT NOT NULL,
     publishDate DATE NOT NULL,
     price DECIMAL NOT NULL,
-    description bytea
+    story bytea
     );
 """)
 
@@ -46,4 +46,5 @@ def create_table_in_database(db_url):
         if cur: cur.close()
         if conn: conn.close()
 
+#for db_url in DATABASE_URLS:
 create_table_in_database(db_url)
