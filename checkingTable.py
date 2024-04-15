@@ -1,6 +1,6 @@
 import psycopg2
 
-db_url = "postgres://gvdulkma:RPuoPh_iTN-1XwDnpkrBIsmTMqyiDo0f@bubble.db.elephantsql.com/gvdulkma"
+db_url = ""
 
 try:
         conn = psycopg2.connect(db_url)

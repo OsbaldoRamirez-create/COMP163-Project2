@@ -1,6 +1,6 @@
 import psycopg2
 
-db_url = "postgres://gvdulkma:RPuoPh_iTN-1XwDnpkrBIsmTMqyiDo0f@bubble.db.elephantsql.com/gvdulkma"
+db_url = ""
 
 longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim facilisis elit non efficitur. Nulla fermentum est scelerisque pharetra rutrum. Donec tincidunt id turpis eget lacinia. Aenean ut vestibulum diam. Mauris felis orci, iaculis ac commodo vel, ultricies ut neque. Cras a tempor tellus, ac ultricies nisl. In tincidunt magna quis nunc consectetur, non fermentum massa cursus. Morbi condimentum neque eu neque condimentum condimentum. Nullam scelerisque massa et dolor efficitur, ut aliquet eros varius. Aliquam eleifend rhoncus turpis et porta. Sed ac vehicula odio, sit amet sodales odio. Nulla facilisi. Donec malesuada, leo in pretium consequat, ligula libero pretium urna, in porta nunc arcu at urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\
 Curabitur pharetra turpis tellus, ac varius lacus lacinia vitae. Cras rhoncus bibendum lectus, in fringilla felis venenatis ut. Cras quis arcu eget quam volutpat rutrum. In cursus quam a orci tristique ultricies nec quis risus. Duis a sem sagittis, faucibus nisi nec, congue tellus. Sed vestibulum quis lacus eget pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat.\
